@@ -16,7 +16,6 @@ const allGsmMember = () => {
         } catch (err) {
             console.log(err)
         }
-
     }
 
     useEffect(() => {
