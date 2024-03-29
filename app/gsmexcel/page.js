@@ -12,7 +12,7 @@ const allGsmMember = () => {
             if (allData.data.message == 'Fetch All Data successfully') {
                 setAllMember(allData.data.resp)
             }
-            console.log(data)
+            console.log(allData)
         } catch (err) {
             console.log(err)
         }
