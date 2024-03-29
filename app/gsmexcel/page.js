@@ -23,6 +23,8 @@ const allGsmMember = () => {
         getGsmData();
     }, []);
 
+    console.log(allMember)
+
     const downloadHandler = () => {
         const allSelections = allMember;
         const workbook = XLSX.utils.book_new();
@@ -32,7 +34,7 @@ const allGsmMember = () => {
         location.reload();
     }
 
-    console.log(allMember)
+    
     return (
         <>
             <Grid container sx={{ height: '100vh', justifyContent: 'center', alignItems: 'center' }}>
