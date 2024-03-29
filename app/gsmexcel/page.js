@@ -12,7 +12,7 @@ const allGsmMember = () => {
             if (allData.data.message == 'Fetch All Data successfully') {
                 setAllMember(allData.data.resp)
             }
-            console.log(allData)
+            // console.log(allData)
         } catch (err) {
             console.log(err)
         }
@@ -33,7 +33,7 @@ const allGsmMember = () => {
         location.reload();
     }
 
-    
+
     return (
         <>
             <Grid container sx={{ height: '100vh', justifyContent: 'center', alignItems: 'center' }}>
@@ -52,7 +52,6 @@ const allGsmMember = () => {
 
                 </Grid>
             </Grid>
-
         </>
     )
 }
