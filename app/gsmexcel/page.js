@@ -1,5 +1,4 @@
 'use client'
-import BasicTable from '@/componants/BasicTable';
 import { AppBar, Box, Button, Grid, Paper, Toolbar, Typography } from '@mui/material';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
@@ -43,7 +42,7 @@ const allGsmMember = () => {
     // console.log(allMember)
 
     const downloadHandler = () => {
-        const allSelections = allMember;
+        const allSelections = data;
         const workbook = XLSX.utils.book_new();
         const worksheet = XLSX.utils.json_to_sheet(allSelections);
         XLSX.utils.book_append_sheet(workbook, worksheet, 'Selections');
