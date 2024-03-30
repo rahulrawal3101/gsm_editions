@@ -146,7 +146,7 @@ const page = () => {
     const res = await savePlayerData(savedSelections);
     if (res.response === 'ok') {
       setLoader(false);
-      alert("Data updated! Thanks");
+      alert("Your Entries have been saved");
       localStorage.removeItem('player');
       setCount("");
       setIsLogged(false)
