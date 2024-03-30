@@ -1,18 +1,17 @@
 'use client'
-import BasicTable from '@/componants/BasicTable';
-import { AppBar, Box, Button, Grid, Paper, Toolbar, Typography } from '@mui/material';
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
-import * as XLSX from 'xlsx';
+
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
+import { useEffect, useState } from 'react';
 import { fetchPlayersTimings } from '@/lib/actions/verifyplayer.action';
 
-const allGsmMember = () => {
+
+export default function BasicTable() {
     const [data,setData] = useState([]);
     const fetchData  = async()=>{
         const getData = await fetchPlayersTimings()
@@ -23,66 +22,8 @@ const allGsmMember = () => {
     },[])
     useEffect(()=>{return;},[data]);
     console.log(data)
-    // const [allMember, setAllMember] = useState()
-    // const getGsmData = async () => {
-    //     try {
-    //         const allData = await axios.get('/api/gsmmember');
-    //         if (allData.data.message == 'Fetch All Data successfully') {
-    //             setAllMember(allData.data.resp)
-    //         }
-    //         // console.log(allData)
-    //     } catch (err) {
-    //         console.log(err)
-    //     }
-    // }
-
-    // useEffect(() => {
-    //     getGsmData();
-    // }, []);
-
-    // console.log(allMember)
-
-    const downloadHandler = () => {
-        const allSelections = allMember;
-        const workbook = XLSX.utils.book_new();
-        const worksheet = XLSX.utils.json_to_sheet(allSelections);
-        XLSX.utils.book_append_sheet(workbook, worksheet, 'Selections');
-        XLSX.writeFile(workbook, 'selections.xlsx');
-        location.reload();
-    }
-
-
-    return (
-        <>
-            {/* <Grid container sx={{ height: '100vh', justifyContent: 'center', alignItems: 'center' }}>
-                <Grid item lg={5} md={7} sm={10} xs={11} >
-                    <Grid container component={Paper} elevation={2} >
-                        <Grid item xs={12} sx={{ bgcolor: 'crimson', p: '10px', borderRadius: '5px 5px 0px 0px' }}>
-                            <Typography sx={{ textAlign: 'center', fontWeight: 'bold', color: 'white', fontSize: '23px' }}>GSM Edition 7</Typography>
-                        </Grid>
-                        <Grid item xs={12} sx={{ mt: '20px' }}>
-                            <Typography sx={{ fontSize: '20px', textAlign: 'center' }}>Download All Gsm Member Data </Typography>
-                        </Grid>
-                        <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', mt: '40px', mb: '30px' }}>
-                            <Button variant='contained' onClick={downloadHandler} >Download </Button>
-                        </Grid>
-                    </Grid>
-
-                </Grid>
-            </Grid> */}
-
-            <Box sx={{ flexGrow: 1 }}>
-                <AppBar position="static">
-                    <Toolbar>
-                        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                            User Timing Data
-                        </Typography>
-                        <Button color="success" variant='contained' onClick={downloadHandler}>Download Excel Sheet</Button>
-                    </Toolbar>
-                </AppBar>
-            </Box>
-            {/* <BasicTable /> */}
-            <TableContainer component={Paper} sx={{minHeight:'100vh'}}>
+  return (
+    <TableContainer component={Paper} sx={{minHeight:'100vh'}}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow sx={{width:'fit-content',backgroundColor:'lightgreen',border:'4px solid black'}}>
@@ -181,8 +122,5 @@ const allGsmMember = () => {
         </TableBody>
       </Table>
     </TableContainer>
-        </>
-    )
+  );
 }
-
-export default allGsmMember
