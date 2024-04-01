@@ -27,7 +27,9 @@ useEffect(()=>{
     if(getData){
         router.push('/dashboard')
     }
-},[])
+},[]);
+
+
  
     return (
         <>

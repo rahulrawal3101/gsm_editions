@@ -9,7 +9,7 @@ import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
-import { fetchPlayersTimings } from '@/lib/actions/verifyplayer.action';
+import { deletePlayersData, fetchPlayersTimings } from '@/lib/actions/verifyplayer.action';
 
 const allGsmMember = () => {
     const [data,setData] = useState([]);
@@ -22,6 +22,16 @@ const allGsmMember = () => {
     },[])
     useEffect(()=>{return;},[data]);
     console.log(data)
+
+    const deleteHandler=async()=>{
+        const delData = await deletePlayersData();
+        if(delData.message= 'All Enteries Deleted Successfully'){
+            alert(delData.message);
+            location.reload();
+        }
+        console.log(delData)
+        
+    }
     // const [allMember, setAllMember] = useState()
     // const getGsmData = async () => {
     //     try {
@@ -48,7 +58,9 @@ const allGsmMember = () => {
         XLSX.utils.book_append_sheet(workbook, worksheet, 'Selections');
         XLSX.writeFile(workbook, 'selections.xlsx');
         location.reload();
-    }
+    };
+
+    
 
 
     return (
@@ -76,7 +88,10 @@ const allGsmMember = () => {
                         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                             User Timing Data
                         </Typography>
+                        <Box>
+                        <Button color='error' variant='contained' sx={{mr:'20px'}} onClick={deleteHandler}>Delete All Enteries</Button>
                         <Button color="success" variant='contained' onClick={downloadHandler}>Download Excel Sheet</Button>
+                        </Box>
                     </Toolbar>
                 </AppBar>
             </Box>
