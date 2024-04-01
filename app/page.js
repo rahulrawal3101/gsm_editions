@@ -72,7 +72,7 @@ if(allowAccess()){
 }else{
     return (
         <div style={{width:'100vw',height:'100vh',display:'flex',alignItems:'center',justifyContent:'center'}}>
-            <Image src={server}  alt='Relax Now' objectFit='contain'/>
+            <Image src={server}   alt='Relax Now' objectFit='contain' />
 
            {/* <h1 style={{fontWeight:900,position:'absolute',top:50,fontSize:'100px'}}>
            Relax

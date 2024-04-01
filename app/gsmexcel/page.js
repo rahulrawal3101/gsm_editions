@@ -83,8 +83,8 @@ const allGsmMember = () => {
             </Grid> */}
 
             <Box sx={{ flexGrow: 1 }}>
-                <AppBar position="static">
-                    <Toolbar>
+                <AppBar position="static" >
+                    <Toolbar sx={{bgcolor:'black'}}>
                         <Typography variant="h6" component="div" sx={{ flexGrow: 1,fontSize:{lg:'25px',md:'20px',sm:'18px',xs:'17px'},xs:'17px' }}>
                             User Timing Data
                         </Typography>
@@ -100,46 +100,46 @@ const allGsmMember = () => {
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow sx={{width:'fit-content',backgroundColor:'lightgreen',border:'4px solid black'}}>
-            <TableCell align="center" sx={{border:'1px solid black',fontWeight:900}} >Player Name</TableCell>
-            <TableCell align="center" sx={{border:'1px solid black',fontWeight:900}}>Player ID</TableCell>
-            <TableCell align="center" sx={{border:'1px solid black',fontWeight:900}}>Saturday Date</TableCell>
-            <TableCell align="center" sx={{border:'1px solid black',fontWeight:900}}>Sunday Date</TableCell>
-            <TableCell align="center" sx={{border:'1px solid black',fontWeight:900}}>Saturday 9:00 AM</TableCell>
-            <TableCell align="center" sx={{border:'1px solid black',fontWeight:900}}>Saturday 9:30 AM</TableCell>
-            <TableCell align="center" sx={{border:'1px solid black',fontWeight:900}}>Saturday 10:00 AM</TableCell>
-            <TableCell align="center" sx={{border:'1px solid black',fontWeight:900}}>Saturday 10:30 AM</TableCell>
-            <TableCell align="center" sx={{border:'1px solid black',fontWeight:900}}>Saturday 11:00 AM</TableCell>
-            <TableCell align="center" sx={{border:'1px solid black',fontWeight:900}}>Saturday 11:30 AM</TableCell>
-            <TableCell align="center" sx={{border:'1px solid black',fontWeight:900}}>Saturday 12:00 Noon</TableCell>
-            <TableCell align="center" sx={{border:'1px solid black',fontWeight:900}}>Saturday 12:30 PM</TableCell>
-            <TableCell align="center" sx={{border:'1px solid black',fontWeight:900}}>Saturday 1:00 PM</TableCell>
-            <TableCell align="center" sx={{border:'1px solid black',fontWeight:900}}>Saturday 1:30 PM</TableCell>
-            <TableCell align="center" sx={{border:'1px solid black',fontWeight:900}}>Saturday 2:00 PM</TableCell>
-            <TableCell align="center" sx={{border:'1px solid black',fontWeight:900}}>Saturday 2:30 PM</TableCell>
-            <TableCell align="center" sx={{border:'1px solid black',fontWeight:900}}>Saturday 3:00 PM</TableCell>
-            <TableCell align="center" sx={{border:'1px solid black',fontWeight:900}}>Saturday 3:30 PM</TableCell>
-            <TableCell align="center" sx={{border:'1px solid black',fontWeight:900}}>Saturday 4:00 PM</TableCell>
-            <TableCell align="center" sx={{border:'1px solid black',fontWeight:900}}>Saturday 4:30 PM</TableCell>
-            <TableCell align="center" sx={{border:'1px solid black',fontWeight:900}}>Saturday 5:00 PM</TableCell>
-            <TableCell align="center" sx={{border:'1px solid black',fontWeight:900}}>Saturday 5:30 PM</TableCell>
-            <TableCell align="center" sx={{border:'1px solid black',fontWeight:900}}>Sunday 9:00 AM</TableCell>
-            <TableCell align="center" sx={{border:'1px solid black',fontWeight:900}}>Sunday 9:30 AM</TableCell>
-            <TableCell align="center" sx={{border:'1px solid black',fontWeight:900}}>Sunday 10:00 AM</TableCell>
-            <TableCell align="center" sx={{border:'1px solid black',fontWeight:900}}>Sunday 10:30 AM</TableCell>
-            <TableCell align="center" sx={{border:'1px solid black',fontWeight:900}}>Sunday 11:00 AM</TableCell>
-            <TableCell align="center" sx={{border:'1px solid black',fontWeight:900}}>Sunday 11:30 AM</TableCell>
-            <TableCell align="center" sx={{border:'1px solid black',fontWeight:900}}>Sunday 12:00 Noon</TableCell>
-            <TableCell align="center" sx={{border:'1px solid black',fontWeight:900}}>Sunday 12:30 PM</TableCell>
-            <TableCell align="center" sx={{border:'1px solid black',fontWeight:900}}>Sunday 1:00 PM</TableCell>
-            <TableCell align="center" sx={{border:'1px solid black',fontWeight:900}}>Sunday 1:30 PM</TableCell>
-            <TableCell align="center" sx={{border:'1px solid black',fontWeight:900}}>Sunday 2:00 PM</TableCell>
-            <TableCell align="center" sx={{border:'1px solid black',fontWeight:900}}>Sunday 2:30 PM</TableCell>
-            <TableCell align="center" sx={{border:'1px solid black',fontWeight:900}}>Sunday 3:00 PM</TableCell>
-            <TableCell align="center" sx={{border:'1px solid black',fontWeight:900}}>Sunday 3:30 PM</TableCell>
-            <TableCell align="center" sx={{border:'1px solid black',fontWeight:900}}>Sunday 4:00 PM</TableCell>
-            <TableCell align="center" sx={{border:'1px solid black',fontWeight:900}}>Sunday 4:30 PM</TableCell>
-            <TableCell align="center" sx={{border:'1px solid black',fontWeight:900}}>Sunday 5:00 PM</TableCell>
-            <TableCell align="center" sx={{border:'1px solid black',fontWeight:900}}>Sunday 5:30 PM</TableCell>
+            <TableCell align="center" sx={{border:'2px solid black',fontWeight:900}} >Player Name</TableCell>
+            <TableCell align="center" sx={{border:'2px solid black',fontWeight:900}}>Player ID</TableCell>
+            <TableCell align="center" sx={{border:'2px solid black',fontWeight:900}}>Saturday Date</TableCell>
+            <TableCell align="center" sx={{border:'2px solid black',fontWeight:900}}>Sunday Date</TableCell>
+            <TableCell align="center" sx={{border:'2px solid black',fontWeight:900}}>Saturday 9:00 AM</TableCell>
+            <TableCell align="center" sx={{border:'2px solid black',fontWeight:900}}>Saturday 9:30 AM</TableCell>
+            <TableCell align="center" sx={{border:'2px solid black',fontWeight:900}}>Saturday 10:00 AM</TableCell>
+            <TableCell align="center" sx={{border:'2px solid black',fontWeight:900}}>Saturday 10:30 AM</TableCell>
+            <TableCell align="center" sx={{border:'2px solid black',fontWeight:900}}>Saturday 11:00 AM</TableCell>
+            <TableCell align="center" sx={{border:'2px solid black',fontWeight:900}}>Saturday 11:30 AM</TableCell>
+            <TableCell align="center" sx={{border:'2px solid black',fontWeight:900}}>Saturday 12:00 Noon</TableCell>
+            <TableCell align="center" sx={{border:'2px solid black',fontWeight:900}}>Saturday 12:30 PM</TableCell>
+            <TableCell align="center" sx={{border:'2px solid black',fontWeight:900}}>Saturday 1:00 PM</TableCell>
+            <TableCell align="center" sx={{border:'2px solid black',fontWeight:900}}>Saturday 1:30 PM</TableCell>
+            <TableCell align="center" sx={{border:'2px solid black',fontWeight:900}}>Saturday 2:00 PM</TableCell>
+            <TableCell align="center" sx={{border:'2px solid black',fontWeight:900}}>Saturday 2:30 PM</TableCell>
+            <TableCell align="center" sx={{border:'2px solid black',fontWeight:900}}>Saturday 3:00 PM</TableCell>
+            <TableCell align="center" sx={{border:'2px solid black',fontWeight:900}}>Saturday 3:30 PM</TableCell>
+            <TableCell align="center" sx={{border:'2px solid black',fontWeight:900}}>Saturday 4:00 PM</TableCell>
+            <TableCell align="center" sx={{border:'2px solid black',fontWeight:900}}>Saturday 4:30 PM</TableCell>
+            <TableCell align="center" sx={{border:'2px solid black',fontWeight:900}}>Saturday 5:00 PM</TableCell>
+            <TableCell align="center" sx={{border:'2px solid black',fontWeight:900}}>Saturday 5:30 PM</TableCell>
+            <TableCell align="center" sx={{border:'2px solid black',fontWeight:900}}>Sunday 9:00 AM</TableCell>
+            <TableCell align="center" sx={{border:'2px solid black',fontWeight:900}}>Sunday 9:30 AM</TableCell>
+            <TableCell align="center" sx={{border:'2px solid black',fontWeight:900}}>Sunday 10:00 AM</TableCell>
+            <TableCell align="center" sx={{border:'2px solid black',fontWeight:900}}>Sunday 10:30 AM</TableCell>
+            <TableCell align="center" sx={{border:'2px solid black',fontWeight:900}}>Sunday 11:00 AM</TableCell>
+            <TableCell align="center" sx={{border:'2px solid black',fontWeight:900}}>Sunday 11:30 AM</TableCell>
+            <TableCell align="center" sx={{border:'2px solid black',fontWeight:900}}>Sunday 12:00 Noon</TableCell>
+            <TableCell align="center" sx={{border:'2px solid black',fontWeight:900}}>Sunday 12:30 PM</TableCell>
+            <TableCell align="center" sx={{border:'2px solid black',fontWeight:900}}>Sunday 1:00 PM</TableCell>
+            <TableCell align="center" sx={{border:'2px solid black',fontWeight:900}}>Sunday 1:30 PM</TableCell>
+            <TableCell align="center" sx={{border:'2px solid black',fontWeight:900}}>Sunday 2:00 PM</TableCell>
+            <TableCell align="center" sx={{border:'2px solid black',fontWeight:900}}>Sunday 2:30 PM</TableCell>
+            <TableCell align="center" sx={{border:'2px solid black',fontWeight:900}}>Sunday 3:00 PM</TableCell>
+            <TableCell align="center" sx={{border:'2px solid black',fontWeight:900}}>Sunday 3:30 PM</TableCell>
+            <TableCell align="center" sx={{border:'2px solid black',fontWeight:900}}>Sunday 4:00 PM</TableCell>
+            <TableCell align="center" sx={{border:'2px solid black',fontWeight:900}}>Sunday 4:30 PM</TableCell>
+            <TableCell align="center" sx={{border:'2px solid black',fontWeight:900}}>Sunday 5:00 PM</TableCell>
+            <TableCell align="center" sx={{border:'2px solid black',fontWeight:900}}>Sunday 5:30 PM</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
