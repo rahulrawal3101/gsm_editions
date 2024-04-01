@@ -1,8 +1,10 @@
 'use client'
-import { verifyPlayer } from '@/lib/actions/verifyplayer.action'
-import { Button, Grid, Paper, TextField, Typography } from '@mui/material'
-import { useRouter } from 'next/navigation'
-import React, { useEffect, useState } from 'react'
+import { verifyPlayer } from '@/lib/actions/verifyplayer.action';
+import { Button, Grid, Paper, TextField, Typography } from '@mui/material';
+import Image from 'next/image';
+import { useRouter } from 'next/navigation';
+import React, { useEffect, useState } from 'react';
+import server from '../assets/server.png'
 
 const Login = () => {
     const router = useRouter();
@@ -29,8 +31,12 @@ useEffect(()=>{
     }
 },[]);
 
+const allowAccess = ()=>{
+    const today = new Date().getDate();
+    return  today === 1 || today === 2 || today === 3 || today === 4; 
+}
 
- 
+if(allowAccess()){
     return (
         <>
             <Grid container sx={{ justifyContent: 'center', alignItems: 'center', height: '100vh', bgcolor: '#fafafa' }}>
@@ -63,6 +69,24 @@ useEffect(()=>{
 
         </>
     )
+}else{
+    return (
+        <div style={{width:'100vw',height:'100vh',display:'flex',alignItems:'center',justifyContent:'center'}}>
+            <Image src={server}  alt='Relax Now' objectFit='contain'/>
+
+           {/* <h1 style={{fontWeight:900,position:'absolute',top:50,fontSize:'100px'}}>
+           Relax
+            </h1>
+            <h1 style={{fontWeight:900,position:'absolute',top:200}}>
+            Sorry, we're down for scheduled maintenance right now!
+            </h1> */}
+        </div>
+    )
+}
+
+
+ 
+   
 }
 
 export default Login

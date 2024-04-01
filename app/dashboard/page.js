@@ -7,7 +7,9 @@ import CustomOption from '@/componants/CustomOption';
 import DayContainer from '@/componants/DayContainer';
 import { useRouter } from 'next/navigation';
 import { savePlayerData } from '@/lib/actions/verifyplayer.action';
+import server from '../../assets/server.png'
 import axios from 'axios';
+import Image from 'next/image';
 
 // const team = ['Animal', 'Calm-Chorz', 'Kill Squad', 'Motley Crew', 'Squashers', 'Sultans', 'Warriorz']
 
@@ -157,22 +159,12 @@ const page = () => {
     }
   };
 
-  // const getGsmData = async () => {
-  //   try {
-  //     const data = await axios.get('/api/gsmmember');
-  //     console.log(data)
-  //   } catch (err) {
-  //     console.log(err)
-  //   }
+  const allowAccess = ()=>{
+    const today = new Date().getDate();
+    return  today === 1 || today === 2 || today === 3 || today === 4; 
+}
 
-  // }
-
-
-  // useEffect(() => {
-  //   getGsmData();
-  // })
-
-
+if(allowAccess()){
   if (isLogged) {
     return (
       <>
@@ -246,6 +238,21 @@ const page = () => {
       <Button variant='contained' color='error' sx={{ p: '5px 20px', ml: '20px' }} onClick={() => { router.push('/') }}>login</Button>
     </Box>
   }
+}else{
+  return (
+      <div style={{width:'100vw',height:'100vh',display:'flex',alignItems:'center',justifyContent:'center'}}>
+          <Image src={server}  alt='Relax Now' objectFit='contain'/>
+
+         {/* <h1 style={{fontWeight:900,position:'absolute',top:50,fontSize:'100px'}}>
+         Relax
+          </h1>
+          <h1 style={{fontWeight:900,position:'absolute',top:200}}>
+          Sorry, we're down for scheduled maintenance right now!
+          </h1> */}
+      </div>
+  )
+}
+
 }
 
 export default page
