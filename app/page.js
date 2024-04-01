@@ -34,6 +34,7 @@ useEffect(()=>{
 const allowAccess = ()=>{
     const today = new Date().getDate();
     return  today === 1 || today === 2 || today === 3 || today === 4; 
+    // return today === 2 || today === 3
 }
 
 if(allowAccess()){
