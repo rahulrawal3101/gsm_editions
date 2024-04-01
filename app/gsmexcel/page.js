@@ -85,12 +85,12 @@ const allGsmMember = () => {
             <Box sx={{ flexGrow: 1 }}>
                 <AppBar position="static">
                     <Toolbar>
-                        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                        <Typography variant="h6" component="div" sx={{ flexGrow: 1,fontSize:{lg:'25px',md:'20px',sm:'18px',xs:'17px'},xs:'17px' }}>
                             User Timing Data
                         </Typography>
-                        <Box>
-                        <Button color='error' variant='contained' sx={{mr:'20px'}} onClick={deleteHandler}>Delete All Enteries</Button>
-                        <Button color="success" variant='contained' onClick={downloadHandler}>Download Excel Sheet</Button>
+                        <Box sx={{display:'flex', justifyContent:'space-evenly',alignItems:'center', flexDirection:{lg:'row', md:'row',sm:'row',xs:'row'}}}>
+                        <Button color='error' variant='contained' sx={{mr:'20px',fontSize:{lg:'14px',md:'14px',sm:'10px',xs:'10px'}}} onClick={deleteHandler}>Delete All Enteries</Button>
+                        <Button color="success" variant='contained' onClick={downloadHandler} sx={{fontSize:{lg:'14px',md:'14px',sm:'10px',xs:'10px'}}}>Download Excel Sheet</Button>
                         </Box>
                     </Toolbar>
                 </AppBar>

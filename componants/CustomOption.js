@@ -12,7 +12,7 @@ const CustomOption = ({option,type,onClick}) => {
         <h3 className="text-white text-sm">{option}</h3>
     </div> */}
   
-        <Grid item lg={5} md={5} sm={12} xs={12} onClick={onClick} sx={{display:'flex', justifyContent:'center',alignItems:'center',borderRadius:'10px',p:'10px',cursor:'pointer', bgcolor:'rgb(51 65 85)'}}>
+        <Grid item lg={5} md={5} sm={12} xs={12} onClick={onClick} sx={{display:'flex', justifyContent:'center',alignItems:'center',borderRadius:'10px',p:'10px',cursor:'pointer', bgcolor:'rgb(51 65 85)','&:hover':{bgcolor:'black'}}}>
         <Typography sx={{fontSize: '16px',color: type === type.split('-')[0] ? '#b9f6ca' : 'red',fontWeight: '600' }}>{type}</Typography>
         
         <Typography sx={{fontSize:'15px',color:'white'}}>{option}</Typography>
