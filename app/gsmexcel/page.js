@@ -185,7 +185,7 @@ const allGsmMember = () => {
               <TableCell align="center" sx={{border:'1px solid black',fontWeight:900,bgcolor:timing["sunday_2:30 PM"] === '✓' ?'green' :'red'}}>{timing["sunday_2:30 PM"]}</TableCell>
               <TableCell align="center" sx={{border:'1px solid black',fontWeight:900,bgcolor:timing["sunday_3:00 PM"] === '✓' ?'green' :'red'}}>{timing["sunday_3:00 PM"]}</TableCell>
               <TableCell align="center" sx={{border:'1px solid black',fontWeight:900,bgcolor:timing["sunday_3:30 PM"] === '✓' ?'green' :'red'}}>{timing["sunday_3:30 PM"]}</TableCell>
-              <TableCell align="center" sx={{border:'1px solid black',fontWeight:900,bgcolor:timing["sunday_4:00 PM"] === '✓' ?'green' :'red'}}>{timing["saturday_4:00 PM"]}</TableCell>
+              <TableCell align="center" sx={{border:'1px solid black',fontWeight:900,bgcolor:timing["sunday_4:00 PM"] === '✓' ?'green' :'red'}}>{timing["sunday_4:00 PM"]}</TableCell>
               <TableCell align="center" sx={{border:'1px solid black',fontWeight:900,bgcolor:timing["sunday_4:30 PM"] === '✓' ?'green' :'red'}}>{timing["sunday_4:30 PM"]}</TableCell>
               <TableCell align="center" sx={{border:'1px solid black',fontWeight:900,bgcolor:timing["sunday_5:00 PM"] === '✓' ?'green' :'red'}}>{timing["sunday_5:00 PM"]}</TableCell>
               <TableCell align="center" sx={{border:'1px solid black',fontWeight:900,bgcolor:timing["sunday_5:30 PM"] === '✓' ?'green' :'red'}}>{timing["sunday_5:30 PM"]}</TableCell>
